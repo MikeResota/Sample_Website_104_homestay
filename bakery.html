@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Shop | Serenity Homestay & Bakery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="toast-container"></div>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-house-heart-fill"></i> Serenity</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link active" href="bakery.html">Bakery</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a href="cart.html" class="nav-link cart-btn"><i class="bi bi-cart3"></i> Cart <span class="cart-count">0</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header" style="background-image: linear-gradient(135deg, rgba(44,36,27,0.75), rgba(139,94,60,0.65)), url('cafe.jpg');">
+    <div class="container">
+      <h1>Our Bakery</h1>
+      <p class="lead mb-0 opacity-90">Fresh from the oven — order online for pickup or local delivery</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <!-- Search -->
+      <div class="search-bar fade-in-up">
+        <i class="bi bi-search"></i>
+        <input type="text" id="product-search" class="form-control" placeholder="Search breads, cakes, pastries...">
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-btns fade-in-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Bread">Breads</button>
+        <button class="filter-btn" data-filter="Pastry">Pastries</button>
+        <button class="filter-btn" data-filter="Cake">Cakes</button>
+        <button class="filter-btn" data-filter="Cookies">Cookies</button>
+        <button class="filter-btn" data-filter="Drinks">Drinks</button>
+      </div>
+
+      <div class="row g-4" id="product-grid">
+        <!-- Bread -->
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Bread">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="bread.jpg" alt="Artisan Sourdough">
+              <span class="product-badge">Fresh Daily</span>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Bread</div>
+              <h5 class="product-title">Artisan Sourdough</h5>
+              <p class="product-desc">Naturally leavened, crusty exterior, soft open crumb.</p>
+              <div class="product-footer">
+                <span class="product-price">$8.50</span>
+                <button class="btn-add-cart" data-id="p1" data-name="Artisan Sourdough" data-price="8.50" data-image="bread.jpg" data-category="Bread">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Bread">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="muffin.jpg" alt="Multigrain Loaf">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Bread</div>
+              <h5 class="product-title">Multigrain Loaf</h5>
+              <p class="product-desc">Hearty blend of seeds and whole grains.</p>
+              <div class="product-footer">
+                <span class="product-price">$7.50</span>
+                <button class="btn-add-cart" data-id="p5" data-name="Multigrain Loaf" data-price="7.50" data-image="muffin.jpg" data-category="Bread">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pastries -->
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Pastry">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="pastry.jpg" alt="Butter Croissants">
+              <span class="product-badge">Best Seller</span>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Pastry</div>
+              <h5 class="product-title">Butter Croissants (4)</h5>
+              <p class="product-desc">Classic French-style, flaky and golden.</p>
+              <div class="product-footer">
+                <span class="product-price">$12.00</span>
+                <button class="btn-add-cart" data-id="p3" data-name="Butter Croissants (4)" data-price="12.00" data-image="pastry.jpg" data-category="Pastry">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Pastry">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="croissant.jpg" alt="Almond Croissant">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Pastry</div>
+              <h5 class="product-title">Almond Croissant</h5>
+              <p class="product-desc">Filled with almond cream, topped with sliced almonds.</p>
+              <div class="product-footer">
+                <span class="product-price">$4.75</span>
+                <button class="btn-add-cart" data-id="p6" data-name="Almond Croissant" data-price="4.75" data-image="croissant.jpg" data-category="Pastry">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Pastry">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="tart.jpg" alt="Fruit Tart">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Pastry</div>
+              <h5 class="product-title">Seasonal Fruit Tart</h5>
+              <p class="product-desc">Buttery crust, pastry cream, fresh seasonal fruit.</p>
+              <div class="product-footer">
+                <span class="product-price">$6.50</span>
+                <button class="btn-add-cart" data-id="p7" data-name="Seasonal Fruit Tart" data-price="6.50" data-image="tart.jpg" data-category="Pastry">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cakes -->
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Cake">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="cake.jpg" alt="Chocolate Fudge Cake">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Cake</div>
+              <h5 class="product-title">Chocolate Fudge Cake</h5>
+              <p class="product-desc">Three layers of rich chocolate with ganache frosting. (Whole)</p>
+              <div class="product-footer">
+                <span class="product-price">$32.00</span>
+                <button class="btn-add-cart" data-id="p2" data-name="Chocolate Fudge Cake" data-price="32.00" data-image="cake.jpg" data-category="Cake">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Cake">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="muffin.jpg" alt="Lemon Drizzle Cake">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Cake</div>
+              <h5 class="product-title">Lemon Drizzle Loaf</h5>
+              <p class="product-desc">Zesty lemon cake with sweet citrus glaze.</p>
+              <div class="product-footer">
+                <span class="product-price">$18.00</span>
+                <button class="btn-add-cart" data-id="p8" data-name="Lemon Drizzle Loaf" data-price="18.00" data-image="muffin.jpg" data-category="Cake">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cookies -->
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Cookies">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="cookies.jpg" alt="Chocolate Chip Cookies">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Cookies</div>
+              <h5 class="product-title">Chocolate Chip Cookies</h5>
+              <p class="product-desc">Soft-baked, loaded with dark chocolate chips. (Dozen)</p>
+              <div class="product-footer">
+                <span class="product-price">$15.00</span>
+                <button class="btn-add-cart" data-id="p4" data-name="Chocolate Chip Cookies" data-price="15.00" data-image="cookies.jpg" data-category="Cookies">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Cookies">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="pastry.jpg" alt="Oatmeal Raisin">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Cookies</div>
+              <h5 class="product-title">Oatmeal Raisin (Dozen)</h5>
+              <p class="product-desc">Chewy, spiced, and packed with plump raisins.</p>
+              <div class="product-footer">
+                <span class="product-price">$14.00</span>
+                <button class="btn-add-cart" data-id="p9" data-name="Oatmeal Raisin Cookies" data-price="14.00" data-image="pastry.jpg" data-category="Cookies">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Drinks">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="coffee.jpg" alt="House Blend Coffee">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Drinks</div>
+              <h5 class="product-title">House Blend Coffee</h5>
+              <p class="product-desc">Medium roast, freshly ground. Bag of 12 oz.</p>
+              <div class="product-footer">
+                <span class="product-price">$14.00</span>
+                <button class="btn-add-cart" data-id="p10" data-name="House Blend Coffee" data-price="14.00" data-image="coffee.jpg" data-category="Drinks">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Drinks">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="coffee.jpg" alt="Hot Cocoa Mix">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Drinks</div>
+              <h5 class="product-title">Artisan Hot Cocoa</h5>
+              <p class="product-desc">Rich chocolate mix with real cocoa. Makes 8 cups.</p>
+              <div class="product-footer">
+                <span class="product-price">$11.00</span>
+                <button class="btn-add-cart" data-id="p11" data-name="Artisan Hot Cocoa" data-price="11.00" data-image="coffee.jpg" data-category="Drinks">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extra item -->
+        <div class="col-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="Pastry">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="muffin.jpg" alt="Blueberry Muffins">
+              <span class="product-badge">New</span>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Pastry</div>
+              <h5 class="product-title">Blueberry Muffins (4)</h5>
+              <p class="product-desc">Bursting with wild blueberries and a sugar crust.</p>
+              <div class="product-footer">
+                <span class="product-price">$10.00</span>
+                <button class="btn-add-cart" data-id="p12" data-name="Blueberry Muffins (4)" data-price="10.00" data-image="muffin.jpg" data-category="Pastry">
+                  <i class="bi bi-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info banner -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4 fade-in-up">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon mx-auto"><i class="bi bi-clock"></i></div>
+            <h5>Bakery Hours</h5>
+            <p class="text-muted mb-0">Daily 7:00 AM – 6:00 PM<br>Fresh batches all day</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-in-up">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon mx-auto"><i class="bi bi-truck"></i></div>
+            <h5>Local Delivery</h5>
+            <p class="text-muted mb-0">Free over $50<br>Within 15 miles</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-in-up">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon mx-auto"><i class="bi bi-bag-check"></i></div>
+            <h5>Pickup Ready</h5>
+            <p class="text-muted mb-0">Order online<br>Ready in ~30 mins</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h5><i class="bi bi-house-heart-fill me-2"></i>Serenity Homestay</h5>
+          <p class="mb-3">Warm hospitality and daily-baked artisan goods.</p>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Explore</h5>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="bakery.html">Bakery</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Support</h5>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+          <a href="cart.html">Cart</a>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <p class="mb-2"><i class="bi bi-geo-alt me-2"></i> 42 Willow Lane, Green Valley</p>
+          <p class="mb-0"><i class="bi bi-telephone me-2"></i> +1 (555) 234-5678</p>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Serenity Homestay & Bakery. Sample Website We Create</div>
+    </div>
+  </footer>
+
+  <button class="back-to-top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
