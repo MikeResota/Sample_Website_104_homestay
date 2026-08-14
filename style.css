@@ -11,6 +11,7 @@
   --accent-hover: #B8860B;
   --bg-cream: #FDF8F3;
   --bg-soft: #F5EDE4;
+  --bg-warm: #FAF0E6;  /* Added warm background */
   --text-dark: #2C241B;
   --text-muted: #6B5E52;
   --success: #5A7D4A;
@@ -298,6 +299,10 @@ img {
 
 .bg-soft {
   background: var(--bg-soft) !important;
+}
+
+.bg-warm {
+  background: var(--bg-warm) !important;
 }
 
 /* ========== FEATURE CARDS ========== */
