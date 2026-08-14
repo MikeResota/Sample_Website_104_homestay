@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | Serenity Homestay & Bakery</title>
+  <title>Gallery | Serenity Homestay</title>
+  <meta name="description" content="Explore photos of our rooms, gardens, and common spaces at Serenity Homestay.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +17,7 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html"><i class="bi bi-house-heart-fill"></i> Serenity</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -23,94 +25,93 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
-          <li class="nav-item"><a class="nav-link" href="bakery.html">Bakery</a></li>
           <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        <a href="cart.html" class="nav-link cart-btn"><i class="bi bi-cart3"></i> Cart <span class="cart-count">0</span></a>
+        <a href="rooms.html" class="btn btn-primary-custom btn-sm px-3">Book Now</a>
       </div>
     </div>
   </nav>
 
   <header class="page-header" style="background-image: linear-gradient(135deg, rgba(44,36,27,0.75), rgba(139,94,60,0.65)), url('garden.jpg');">
     <div class="container">
-      <h1>Gallery</h1>
-      <p class="lead mb-0 opacity-90">A glimpse into our spaces, garden & bakery life</p>
+      <h1 data-aos="fade-up">Gallery</h1>
+      <p class="lead mb-0 opacity-90" data-aos="fade-up" data-aos-delay="100">A glimpse into our rooms, gardens & shared spaces</p>
     </div>
   </header>
 
   <section class="section">
     <div class="container">
       <div class="row g-3">
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="exterior.jpg" alt="Exterior">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="50">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="exterior.jpg" data-title="Exterior View">
+            <img src="exterior.jpg" alt="Exterior" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="room1.jpg" alt="Garden Suite">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="room1.jpg" data-title="Garden Suite">
+            <img src="room1.jpg" alt="Garden Suite" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="room2.jpg" alt="Cozy Room">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="150">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="room2.jpg" data-title="Cozy Retreat">
+            <img src="room2.jpg" alt="Cozy Room" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="kitchen.jpg" alt="Kitchen">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="50">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="kitchen.jpg" data-title="Kitchen">
+            <img src="kitchen.jpg" alt="Kitchen" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="garden.jpg" alt="Garden">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="garden.jpg" data-title="Garden">
+            <img src="garden.jpg" alt="Garden" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="cafe.jpg" alt="Cafe Area">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="150">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="living.jpg" data-title="Living Area">
+            <img src="living.jpg" alt="Living Area" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="living.jpg" alt="Living Area">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="50">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="dining.jpg" data-title="Dining Space">
+            <img src="dining.jpg" alt="Dining" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="dining.jpg" alt="Dining">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="bathroom.jpg" data-title="Bathroom">
+            <img src="bathroom.jpg" alt="Bathroom" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="bathroom.jpg" alt="Bathroom">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="150">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="room3.jpg" data-title="Family Cottage">
+            <img src="room3.jpg" alt="Family Cottage" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="bread.jpg" alt="Fresh Bread">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="50">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="room4.jpg" data-title="Sunrise Loft">
+            <img src="room4.jpg" alt="Sunrise Loft" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="cake.jpg" alt="Cake">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="hero-bg.jpg" data-title="Surroundings">
+            <img src="hero-bg.jpg" alt="Surroundings" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
-        <div class="col-6 col-md-4 fade-in-up">
-          <div class="gallery-item">
-            <img src="pastry.jpg" alt="Pastries">
+        <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="150">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="about-bg.jpg" data-title="Atmosphere">
+            <img src="about-bg.jpg" alt="Atmosphere" loading="lazy">
             <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
           </div>
         </div>
@@ -118,45 +119,64 @@
     </div>
   </section>
 
+  <!-- Gallery Lightbox Modal -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0 text-center position-relative">
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close" style="z-index:10;"></button>
+          <img id="gallery-modal-img" src="" alt="" class="img-fluid rounded-3 shadow-lg">
+          <p id="gallery-modal-title" class="text-white mt-3 mb-0"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4">
           <h5><i class="bi bi-house-heart-fill me-2"></i>Serenity Homestay</h5>
-          <p class="mb-3">Warm hospitality and daily-baked artisan goods.</p>
+          <p class="mb-3">A peaceful retreat offering warm hospitality and restful spaces in the heart of nature.</p>
           <div class="social-links">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
         <div class="col-6 col-lg-2">
           <h5>Explore</h5>
           <a href="index.html">Home</a>
-          <a href="about.html">About</a>
+          <a href="about.html">About Us</a>
           <a href="rooms.html">Rooms</a>
-          <a href="bakery.html">Bakery</a>
+          <a href="gallery.html">Gallery</a>
         </div>
         <div class="col-6 col-lg-2">
           <h5>Support</h5>
-          <a href="gallery.html">Gallery</a>
           <a href="contact.html">Contact</a>
-          <a href="cart.html">Cart</a>
+          <a href="rooms.html">Book a Stay</a>
+          <a href="about.html">Our Story</a>
         </div>
         <div class="col-lg-4">
-          <h5>Contact</h5>
+          <h5>Contact Info</h5>
           <p class="mb-2"><i class="bi bi-geo-alt me-2"></i> 42 Willow Lane, Green Valley</p>
-          <p class="mb-0"><i class="bi bi-telephone me-2"></i> +1 (555) 234-5678</p>
+          <p class="mb-2"><i class="bi bi-telephone me-2"></i> +1 (555) 234-5678</p>
+          <p class="mb-2"><i class="bi bi-envelope me-2"></i> hello@serenityhomestay.com</p>
+          <p class="mb-0"><i class="bi bi-clock me-2"></i> Check-in: 3 PM · Check-out: 11 AM</p>
         </div>
       </div>
-      <div class="footer-bottom">&copy; 2026 Serenity Homestay & Bakery. Sample Website We Create</div>
+      <div class="footer-bottom">
+        &copy; 2026 Serenity Homestay. All rights reserved. · Sample Website
+      </div>
     </div>
   </footer>
 
-  <button class="back-to-top"><i class="bi bi-chevron-up"></i></button>
+  <button class="back-to-top" aria-label="Back to top"><i class="bi bi-chevron-up"></i></button>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
